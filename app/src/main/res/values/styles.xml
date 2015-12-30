@@ -8,4 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CardTitleTextAppearance">
+        <item name="android:textSize">@dimen/card_title_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@color/semi_transparent_background</item>
+    </style>
+
+    <style name="CardDescTextAppearance">
+        <item name="android:textSize">@dimen/card_desc_size</item>
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:lines">3</item>
+    </style>
+
 </resources>
