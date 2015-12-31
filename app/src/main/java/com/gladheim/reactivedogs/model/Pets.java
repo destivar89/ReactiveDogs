@@ -1,5 +1,6 @@
 package com.gladheim.reactivedogs.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,7 +8,7 @@ import java.util.List;
  */
 public class Pets {
 
-    private List<Pet> dogsList;
+    private List<Pet> dogsList = new ArrayList<>();
 
     public Pet get(int index){
         return dogsList.get(index);

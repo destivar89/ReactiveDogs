@@ -1,18 +1,43 @@
 package com.gladheim.petsapi.model;
 
-import java.util.Date;
-
 /**
  * Created by David on 30/12/15.
  */
 public class Pet {
 
     private User foundBy;
-    private String foundLocation;
+    private Location foundLocation;
     private Date foundDate;
     private String pictureUrl;
-    private PetType petType;
+    private String petType;
     private String race;
     private String description;
 
+    public Location getFoundLocation() {
+        return foundLocation;
+    }
+
+    public Date getFoundDate() {
+        return foundDate;
+    }
+
+    public String getPictureUrl() {
+        return pictureUrl;
+    }
+
+    public String getPetType() {
+        return petType;
+    }
+
+    public String getRace() {
+        return race;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public User getFoundBy() {
+        return foundBy;
+    }
 }

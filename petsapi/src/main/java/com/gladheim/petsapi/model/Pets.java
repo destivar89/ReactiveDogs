@@ -1,5 +1,6 @@
 package com.gladheim.petsapi.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,17 +8,25 @@ import java.util.List;
  */
 public class Pets {
 
-    private List<Pet> dogsList;
+    private List<Pet> results = new ArrayList<>();
 
     public Pet get(int index){
-        return dogsList.get(index);
+        return results.get(index);
     }
 
     public int size(){
-        return dogsList.size();
+        return results.size();
     }
 
     public void add(Pet pet){
-        dogsList.add(pet);
+        results.add(pet);
+    }
+
+    public void addAll(List<Pet> pets){
+        results.addAll(pets);
+    }
+
+    public List<Pet> getResults() {
+        return results;
     }
 }

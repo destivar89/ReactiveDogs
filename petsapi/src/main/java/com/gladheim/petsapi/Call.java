@@ -3,8 +3,9 @@ package com.gladheim.petsapi;
 /**
  * Created by David on 30/12/15.
  */
-public interface Call<T> {
+public abstract class Call<T> {
 
-    T execute();
-    void enqueue(Callback<T> callback);
+    public abstract T execute();
+    public abstract void enqueue(Callback<T> callback);
+
 }

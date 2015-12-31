@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.gladheim.petsapi.model.Pets;
 import com.gladheim.reactivedogs.R;
 import com.gladheim.reactivedogs.di.DaggerApplication;
 import com.gladheim.reactivedogs.di.DaggerSearchComponent;
@@ -63,5 +64,11 @@ public class SearchActivity extends AppCompatActivity implements SearchAdapter.O
     @Override
     public void onItemClick(View v, int position) {
 
+    }
+
+    @Override
+    public void showPetList(Pets pets) {
+        adapter.addPets(pets);
+        adapter.notifyDataSetChanged();
     }
 }

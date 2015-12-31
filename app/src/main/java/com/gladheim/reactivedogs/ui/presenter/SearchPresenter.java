@@ -1,6 +1,7 @@
 package com.gladheim.reactivedogs.ui.presenter;
 
 import com.gladheim.petsapi.PetsApi;
+import com.gladheim.petsapi.model.Pets;
 
 import javax.inject.Inject;
 
@@ -13,6 +14,6 @@ public abstract class SearchPresenter extends Presenter<SearchPresenter.View> {
     protected PetsApi petsApi;
 
     public interface View {
-
+        void showPetList(Pets pets);
     }
 }

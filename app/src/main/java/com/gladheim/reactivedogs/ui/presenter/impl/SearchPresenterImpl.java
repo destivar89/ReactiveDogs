@@ -2,6 +2,9 @@ package com.gladheim.reactivedogs.ui.presenter.impl;
 
 import android.content.Context;
 
+import com.gladheim.petsapi.Call;
+import com.gladheim.petsapi.Callback;
+import com.gladheim.petsapi.model.Pets;
 import com.gladheim.reactivedogs.di.DaggerApplication;
 import com.gladheim.reactivedogs.ui.presenter.SearchPresenter;
 
@@ -23,7 +26,18 @@ public class SearchPresenterImpl extends SearchPresenter{
 
     @Override
     public void initialize() {
-        petsApi.getPets(null);
+        Call<Pets> petsCall = petsApi.getPets(null);
+        petsCall.enqueue(new Callback<Pets>() {
+            @Override
+            public void onResponse(Pets response) {
+                view.showPetList(response);
+            }
+
+            @Override
+            public void onFailure(Exception e) {
+                e.getMessage();
+            }
+        });
     }
 
     @Override

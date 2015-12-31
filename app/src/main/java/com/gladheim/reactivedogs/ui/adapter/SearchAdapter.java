@@ -10,8 +10,8 @@ import android.widget.TextView;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
+import com.gladheim.petsapi.model.Pets;
 import com.gladheim.reactivedogs.R;
-import com.gladheim.reactivedogs.model.Pets;
 import com.gladheim.reactivedogs.utils.volley.BitmapLruCache;
 
 /**
@@ -49,7 +49,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         holder.thumbnail.setDefaultImageResId(R.drawable.placeholder);
         holder.thumbnail.setErrorImageResId(R.drawable.placeholder);
 
-        holder.title.setText(pets.get(position).getTitle());
+        holder.title.setText("Dog found");
         holder.race.setText(pets.get(position).getRace());
     }
 
