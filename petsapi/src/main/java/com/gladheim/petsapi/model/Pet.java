@@ -8,7 +8,7 @@ public class Pet {
     private User foundBy;
     private Location foundLocation;
     private Date foundDate;
-    private String pictureUrl;
+    private Image image;
     private String petType;
     private String race;
     private String description;
@@ -19,10 +19,6 @@ public class Pet {
 
     public Date getFoundDate() {
         return foundDate;
-    }
-
-    public String getPictureUrl() {
-        return pictureUrl;
     }
 
     public String getPetType() {
@@ -39,5 +35,9 @@ public class Pet {
 
     public User getFoundBy() {
         return foundBy;
+    }
+
+    public Image getImage() {
+        return image;
     }
 }

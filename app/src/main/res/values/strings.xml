@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ReactiveDogs</string>
+    <string name="found_date">encontrado el día</string>
 </resources>

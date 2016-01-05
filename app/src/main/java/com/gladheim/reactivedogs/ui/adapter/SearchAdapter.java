@@ -45,11 +45,11 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
 
         ImageLoader.ImageCache imageCache = new BitmapLruCache();
         ImageLoader imageLoader = new ImageLoader(Volley.newRequestQueue(context), imageCache);
-        holder.thumbnail.setImageUrl(pets.get(position).getPictureUrl(), imageLoader);
+        holder.thumbnail.setImageUrl(pets.get(position).getImage().getUrl(), imageLoader);
         holder.thumbnail.setDefaultImageResId(R.drawable.placeholder);
         holder.thumbnail.setErrorImageResId(R.drawable.placeholder);
 
-        holder.title.setText("Dog found");
+        holder.title.setText(pets.get(position).getPetType());
         holder.race.setText(pets.get(position).getRace());
     }
 

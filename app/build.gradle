@@ -49,4 +49,5 @@ dependencies {
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile project(':petsapi')
     compile project(':retrofitpetsapi')
+    compile 'io.reactivex:rxandroid:1.0.1'
 }
